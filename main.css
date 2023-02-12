@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    /*text-align:;*/
+}
+.wrapper>*{
+    flex: 1 100%;
+}
+.main{
+    /*text-align:;*/
+    height: 600px;
+    background-image: url(kepek/goldihatter1.jpg);
+    background-size: cover;  
+    width: 60%;
+    margin: 0px;
+}
+
+.aside1{background-color: white; margin: 0px;}
+.aside2{background-color: white; margin: 0px;}
+
+.aside2 a{
+    text-decoration: none;
+    color: black; 
+}
+.aside2 a:hover{
+    color: rgb(230, 45, 107);
+}
+
+
+@media all and (min-width:800px){
+    .main{flex: 3;}
+    .aside1{order: 1;}
+    .aside2{order: 2;}
+    .main{order: 2;}
+    footer{order: 4;}
+}
+
+@media all and (min-width:600px){
+    aside{
+        flex: 1;
+    }
+}
+header {
+    padding: 0px;
+    background-color: #333;
+    height: 55px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding-left: 10px;
+}
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.topnav a:hover {
+    color: palevioletred;
+}
+  
+.topnav-right {
+    padding-right: 20px;
+    float: right;
+}
+
+.active{
+    background-color: rgb(72, 70, 70);
+}
+
+footer {
+    height: 30px;
+    text-align: center;
+    background: #ddd;
+    color: black;
+}
