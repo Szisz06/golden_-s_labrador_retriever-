@@ -112,7 +112,10 @@ article{
 }
 
 aside{
+    height: 500px;
+    padding: 30px;
     text-align: center;
+    background-color: rgb(228, 184, 8);
 }
 
 aside a{
