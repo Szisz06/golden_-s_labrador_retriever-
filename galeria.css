@@ -103,12 +103,13 @@ p { all: unset;}
 }
 
 article{
-    background-image: url(kepek/goldihatter1.jpg);
     background-size: cover;  
     width: max-content;
     width: 100%;
     height: 500px;
     margin: 0px;
+    overflow-y: scroll;
+    background-color: rgba(110, 30, 30, 0.783);
 }
 
 aside{
@@ -135,7 +136,6 @@ p{all: unset;}
 
 @media all and (min-width:600px){}
 
-
 footer {
     padding-top: 10px;
     text-align: center;
@@ -148,15 +148,17 @@ footer {
     text-align: center;
 }
 
-
 ul {
     display: flex;
     flex-wrap: wrap;
+    padding: 0px;
+    gap: 5px;
 }
   
 li {
     height: 40vh;
     flex-grow: 1;
+    list-style-type: none;
 }
   
 img {
@@ -164,24 +166,38 @@ img {
     min-width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+    border-radius: 5px;
+    
 }
 
+@media (max-aspect-ratio: 1/1) {
+    li {
+      height: 30vh;
+    }
+  }
+  
 
-article::-webkit-scrollbar {
-    width: 10px;
+  
+  @media (max-height: 480px) {
+    li {
+      height: 80vh;
+    }
   }
   
-  /* Track */
-  article::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  article::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
+
   
-  /* Handle on hover */
-  article::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    ul {
+      flex-direction: row;
+    }
+  
+    li {
+      height: auto;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      max-height: 75vh;
+      min-width: 0;
+    }
   }
