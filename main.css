@@ -103,7 +103,7 @@ p { all: unset;}
 }
 
 article{
-    background-image: url(kepek/goldihatter1.jpg);
+    
     background-size: cover;  
     width: max-content;
     width: 100%;
